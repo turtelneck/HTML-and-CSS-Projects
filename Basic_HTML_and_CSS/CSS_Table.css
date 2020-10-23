@@ -1,0 +1,28 @@
+p {
+	text-align: center;
+}
+.not-center {
+	text-align: left;
+	font-size: 11;
+	background-color: white;
+}
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid silver;
+	border-collapse: collapse;
+}
+tr, th {
+	border: 1px solid silver;
+	border-collapse: collapse;
+	color:#8c1b11;
+}
+tr, td {
+	border: 1px solid silver;
+	border-collapse: collapse;
+	color:#8c1b11;
+}
+td:hover {
+	background-color:#bffffe;
+	color:#411f8c;
+}
