@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Birdstopher ID Form</title>
+</head>
+<body>
+	<p>who are you?</p>
+	<form action="" method="get">
+		first name: <input type="text" name="first_name" id="aa">
+		last name: <input type="text" name="last_name" id="bb">
+		email: <input type="email" name="email" id="cc">
+		<input type="submit" name="submit" value="did I get it right?" onclick="birdstopherChecker(document.getElementById('aa').value, document.getElementById('bb').value, document.getElementById('cc').value)">
+	</form>
+	<script type="text/javascript">
+		function birdstopherChecker(a, b, c) {
+			if (a === "Birdstopher" && b === "Birlumbus" && c === "birdstopher@birlumbus.biz") {
+				alert("yup! you got it right. nice job.");
+			} else {
+				alert("nope! that's not who you are, silly. you're Birdstopher Birlumbus, birdstopher@birlumbus.biz");
+			}
+		}
+	</script>
+</body>
+</html>
