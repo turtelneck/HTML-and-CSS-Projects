@@ -147,7 +147,7 @@ section {
 	HOME SECTION STYLES
 -----------------------------------*/
 #home {
-	background: url(./images/living-room.jpg) no-repeat 50% 50%;
+	background: url(../images/living-room.jpg) no-repeat 50% 50%;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -166,18 +166,17 @@ section {
 }
 
 .head-main {
-	position: relative;
-    top: 81px;
-	text-shadow: 2px 4px 5px rgba(0,0,0,0.9);
-	font-variant: small-caps;
-	color: #ff6060;
-	letter-spacing: 5pt;
-	word-spacing: 21pt;
+	font-family: "Mr De Haviland", sans-serif;
 	font-size: 4.5em;
+	font-variant: ;
+	font-weight: 700;
+	position: relative;
+    top: 89px;
+    left: 21.5%;
+	text-shadow: 2px 4px 5px rgba(0,0,0,0.9);
+	color: #ff6060;
 	text-align: center;
-	font-family: "Gill Sans", sans-serif;
 	line-height: 2;
-	font-weight: 900;
 	border: 5px double #ff6060;
 	padding: 10px;
 }
@@ -329,20 +328,19 @@ section {
 
 .reservation p {
 	color: #fff;
-	width: 50%;
+	text-align: center;
 	margin: 0 auto;
 }
 
 .reservation form {
 	font-size: 15px;
 	outline: none;
-	font-weight: 600;
 	color: #8D8E8F;
 	padding: 12px 12px;
 	width: 70%;
 	border: 1px solid #808080;
 	margin: 2% auto;
-	border-radius: 7px;
+	border-radius: 8px;
 	background: #fff;
 	box-shadow: 2px 3px 3px 0px rgba(0,0,0,0.3);
 	font-family: "Gill Sans", sans-serif;
@@ -351,17 +349,11 @@ section {
 .reservation input[type="text"] {
 	font-size: 15px;
 	outline: none;
-	font-weight: 600;
-	color: #8D8E8F;
-	padding: 2% 1% 2% 7%
-	width: 80%;
-	border-top: 1px solid #090B0D;
-	border-right: 2px solid #424549;
-	border-bottom: 2px solid #424549;
-	border-left: 1px solid #090B0D;
-	margin: 10px 1em;
+	color: #000;
+	padding: 4px 4px 4px 20px;
 	border-radius: 7px;
-	background: #13161B;
+	background: #ffbaba;
+	border-color: #7d7d7d;
 	box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,0.15);
 	font-family: "Gill Sans", sans-serif;
 }
@@ -371,21 +363,7 @@ section {
 }
 
 .form-spacer {
-	padding: 30px 39px;
-}
-
-.terms {
-	margin: 30px 1px 0 0;
-	padding-left: 52px;
-	font-size: 14px;
-	line-height: 5px;
-	color: #000;
-	cursor: pointer;
-	font-family: "Gill Sans", sans-serif;
-	font-weight: 600;
-	position: relative;
-	display: inline;
-	float: right;
+	padding: 10px;
 }
 
 .terms:hover {
@@ -394,27 +372,28 @@ section {
 }
 
 .submit input[type="submit"] {
-	color: rgb(225,225,225);
+	color: #5f5f5f;
 	cursor: pointer;
-	border: none;
+	position: relative;
+    left: 34%;
+	outline: thin solid;
+    outline-style: auto;
 	font-weight: 900;
-	outline: none;
 	text-align: center;
 	font-family: "Gill Sans", sans-serif;
+	font-variant: small-caps;
 	margin: 0px 3%;
 	padding: 7px 0px;
 	width: 25%;
-	font-size: 10px;
-	transition: border-color 0.3s color 0.3s background-color 0.3s;
-	border-radius: 7px;
-	background-color: #797a7b;
+	font-size: 11px;
+	background-color: #ffbaba;
 	box-shadow: 1px 1px 4px 0 rgba(0,0,0,0.3);
 }
 
 .submit input[type="submit"]:hover {
 	color: #000;
-	background-color: #8D8E8F;
-	box-shadow: inset 1px 2px 15px 0 rgba(0,0,0,0.5);
+	background-color: #ffbaba;
+	box-shadow: inset 1px 2px 9px 0 rgba(0,0,0,0.5);
 }
 
 /*----------------------------------
@@ -571,4 +550,12 @@ section {
 
 .photo:hover img {
 	transition: scale(1:1);
+}
+
+/*----------------------------------
+	FORM STYLING
+-----------------------------------*/
+.rsvp {
+	width: 37.7%;
+	margin: 10px 1em;
 }
