@@ -46,6 +46,10 @@ body {
 	z-index: -1;
 }
 
+#centered {
+	text-align: center;
+}
+
 /* Text over the video */ 
 .Video_Text { 
 	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
@@ -66,7 +70,7 @@ body {
 	padding: 10px; 
 	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
 	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
-	background-color: #f2f2f2; 
+	background-color: #f2f2f2;
 }
 
 .Column_2 {
@@ -82,9 +86,18 @@ body {
 	float: left;
 	width: 50%;
 	padding: 10px;
-	padding-top: 3.5%;
+	padding-top: 1%;
 	height: 450px;
 	background-color: #4d4d4d;
+}
+
+.Column_4 {
+	float: left;  
+	width: 50%;
+	padding: 10px;
+	padding-top: 3%;
+	height: 450px;
+	background-color: #f2f2f2;
 }
 
 .Row:after { /* This inserts something after the content of selected elements */
@@ -93,31 +106,35 @@ body {
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
 
-/* Heading 1 elements */
+/* Heading elements */
 h1 {
-	text-transform: uppercase; /* We are capitalizing our headings */
 	font-family: "Trebuchet MS", Optima; 
 	text-align: center;
 	margin-top: 3%; /* We are adding a small margin above the headings */
 	color: #1a1a1a;
 }
 
+h3 {
+	font-family: "Trebuchet MS", Optima; 
+	text-align: center;
+	color: #1a1a1a;
+}
+
 /* Paragraph elements */
 p {
-	font-family: Perpetua, Rockwell Extra Bold;
+	font-family: Arial;
 	text-align: justify;
-	letter-spacing: 1px; /* This expands the text slightly */
-	font-size: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
+	transition: scale(1.0);
 }
 
 /* Center align elements - this embraces all centered text */
 center {
-	font-family: Perpetua, Rockwell Extra Bold;
+	font-family: Arial;
 	text-align: center;
 	letter-spacing: 1px;
-	font-size: 20px;
+	font-size: 14px;
 	padding-left: 20px;
 	padding-right: 20px;
 }
@@ -138,7 +155,7 @@ img {
 	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* This causes our images to have slightly rounded edges */
     max-width: 100%; 
-    height: 340px; 
+    height: 100%; 
 	margin-left: auto; /* This in combination with margin-right: auto centers our images */
     margin-right: auto;
 	display: block;	/* By specifying block display we can ensure our images are able to be centered */
@@ -154,7 +171,7 @@ input[type=text] { /* This covers the input sections of the contact form */
     margin-top: 6px;
     margin-bottom: 16px;
     resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
-    font-family: Perpetua, Rockwell Extra Bold; 
+    font-family: Arial; 
 }
 
 /* Submit button */
@@ -169,7 +186,10 @@ input[type=submit] { /* This covers the submit button for the contact form */
 	display: block;
 	margin-left: auto;
 	margin-right: auto; 
-	font-family: Perpetua, Rockwell Extra Bold;
+	font-family: Arial;
+
+	/*Hover off*/
+	transition: transform 0.2s;
 }
 
 /* Hover effect for submit button */
@@ -177,42 +197,46 @@ input[type=submit]:hover {
 	background-color: white; /* Makes the background turn white when hovered over */
 	color: black; /* Makes the font turn black when hovered over */
 	font-weight: bold; /* Makes the font bold when hovered over */
-	transform: scale(1.5); /* Makes the button increase 1.5 times in size */ 
-	transition: transform 1.5s; /* Makes the transform effect last 1.5 seconds from start to finish */
+	transform: scale(1.15); /* Makes the button increase 1.5 times in size */ 
+	transition: transform 0.2s; /* Makes the transform effect last 1.5 seconds from start to finish */
+	border: solid 1px black;
 }
 
 /* Form elememt */
 form { 
-	border-radius: 5px; 
 	background-color: #f2f2f2;
-	padding: 20px;
+	padding: 0% 10%;
 	font-family: "Trebuchet MS", Optima;
 }
 
 /* Center align element hover effect */
 center:hover {
-	transition: transform 2s;
-	transform: scale(1.1);
+    transition: transform 0.1s;
+	transform: scale(1.01);
 }
 
 /* Paragraph element hover effect */
-p:hover {
-	color: #00004d;	
-    transition: transform 1s;
+p:hover {	
+    transition: transform 0.1s;
 	transform: scale(1.01);
 }
 
 /* Heading 1 element hover effect */
 h1:hover {
-	color: black;
-	font-weight: normal; /* Makes the text no longer bold when hovered over */ 
+	transition: transform 0.1s;
+	transform: scale(1.01);
+}
+
+h3:hover {
+	transition: transform 0.1s;
+	transform: scale(1.01);
 }
 
 /* Image element hover effects */
 img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
-    transition: transform 1s;
-	transform: scale(1.1);
+    transition: transform 0.1s;
+	transform: scale(1.01);
 }
 
 /* Footer element */
