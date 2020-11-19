@@ -40,7 +40,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/1-birdstopher-birlumbus.jpg" alt="birdstopher birlumbus">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(1)" class="photo-overlay">
 								<h3 class="white-head">"Birdstopher Birlumbus"</h3>
 								<p>A piece to inspire adventurous types as they explore far-off places. Perfect to spruce up any space at all, but especially the captain's cabin of your 16th-century Spanish Galleon.</p>
 							</div>
@@ -52,7 +52,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/2-wingston-birdchill.jpg" alt="wingston birdchill">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(2)" class="photo-overlay">
 								<h3 class="white-head">"Wingston Birdchill"</h3>
 								<p>Wingston is a bird for troubled times, a willful beacon of hope for the overwhelmed. We recommend Wingston for the walls of executive offices, or lobbies in government buildings.</p>
 							</div>
@@ -64,7 +64,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/3-birdtoven.jpg" alt="birdtoven">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(3)" class="photo-overlay">
 								<h3 class="white-head">"Birdtoven"</h3>
 								<p>A bird whose soaring melodies are matched only by his extraordinary temper, Birdtoven makes an excellent addition to any music room.
 									<br>
@@ -79,7 +79,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/4-birdraham eggkin.jpg" alt="birdbraham eggkin">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(4)"  class="photo-overlay">
 								<h3 class="white-head">"Birdbraham Eggkin"</h3>
 								<p>A remarkable figure in bird history, Birdbraham is best-known for his tireless fight for Eggmancipation. We recommend this portarait in poster form for the tents of any loved ones serving in 19th-century civil wars.</p>
 							</div>
@@ -91,7 +91,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/5-birdo-bagbeak.jpg" alt="birdo bagbeak">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(5)" class="photo-overlay">
 								<h3 class="white-head">"Birdo Bagbeak"</h3>
 								<p>An unlikely hero, portrayed here in all his heartbreaking innocence. This makes a first-rate addition to any underground dwelling in lush, peaceful places.</p>
 							</div>
@@ -103,7 +103,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/6-dumblebird.jpg" alt="dumblebird">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(6)" class="photo-overlay">
 								<h3 class="white-head">"Dumblebird"</h3>
 								<p>An <i>enchanting</i> portrait of one of the best-respected members of the bird community, and a delightful oddment to decorate the walls of any well-aged European gothic architecture.
 									<br>
@@ -118,7 +118,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/7-birdnigo-wingtoya.jpg" alt="birdnigo wingtoya">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(7)" class="photo-overlay">
 								<h3 class="white-head">"Birdnigo Wingtoya"</h3>
 								<p>He's hunting for a bird with one too many feathers in its right wing. He's got a pretty limited set of skills and a heart of gold. This portrait makes a great gift for swordsmiths and miracle workers.</p>
 							</div>
@@ -130,7 +130,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/8-tloucan-skyflapper.jpg" alt="tloucan skyflapper">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(8)" class="photo-overlay">
 								<h3 class="white-head">"Tloucan Skyflapper"</h3>
 								<p>A rare and exquisite portrait of a bird who lived a long, long time ago somewhere far, far away. He knows there is good in you.</p>
 							</div>
@@ -142,7 +142,7 @@
 					<div class="photo-container">
 						<div class="photo">
 							<img src="./images/thumbs/9-flitzwilliam-birdcy.jpg" alt="flitzwilliam birdcy">
-							<div class="photo-overlay">
+							<div onclick="openModal();currentSlide(9)" class="photo-overlay">
 								<h3 class="white-head">"Flitzwilliam Birdcy"</h3>
 								<p>One of the most absurdly wealthy birds in all of Derbyshire, he's a lot nicer than he looks. This portrait seems especially popular among gentleladies of the Georgian landed gentry.</p>
 							</div>
@@ -154,6 +154,106 @@
 			</div>
 		</section>
 		<!-- END GALLERY -->
+
+		<!-- MODAL GALLERY -->
+		<div id="myModal" class="modal">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+				<div class="mySlides">
+					<div class="numbertext">1 / 9</div>
+					<img src="./images/thumbs/1-birdstopher-birlumbus.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">2 / 9</div>
+					<img src="./images/thumbs/2-wingston-birdchill.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">3 / 9</div>
+					<img src="./images/thumbs/3-birdtoven.jpg" alt="birdtoven" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">4 / 9</div>
+					<img src="./images/thumbs/4-birdraham eggkin.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">5 / 9</div>
+					<img src="./images/thumbs/5-birdo-bagbeak.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">6 / 9</div>
+					<img src="./images/thumbs/6-dumblebird.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">7 / 9</div>
+					<img src="./images/thumbs/7-birdnigo-wingtoya.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">8 / 9</div>
+					<img src="./images/thumbs/8-tloucan-skyflapper.jpg" style="width:100%">
+				</div>
+
+				<div class="mySlides">
+					<div class="numbertext">9 / 9</div>
+					<img src="./images/thumbs/9-flitzwilliam-birdcy.jpg" style="width:100%">
+				</div>
+
+				<!-- Next/previous controls -->
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				<!-- Caption text -->
+				<div class="caption-container">
+					<p id="caption"></p>
+				</div>
+
+				<!-- Thumbnail image controls -->
+				<div class="column">
+					<img class="demo" src="./images/thumbs/1-birdstopher-birlumbus.jpg" onclick="currentSlide(1)" alt="birlumbus">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/2-wingston-birdchill.jpg" onclick="currentSlide(2)" alt="birdchill">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/3-birdtoven.jpg" onclick="currentSlide(3)" alt="birdtoven">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/4-birdraham eggkin.jpg" onclick="currentSlide(4)" alt="birdbraham">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/5-birdo-bagbeak.jpg" onclick="currentSlide(5)" alt="bagbeak">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/6-dumblebird.jpg" onclick="currentSlide(6)" alt="dumblebird">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/7-birdnigo-wingtoya.jpg" onclick="currentSlide(7)" alt="birdnigo">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/8-tloucan-skyflapper.jpg" onclick="currentSlide(8)" alt="tloucan">
+				</div>
+
+				<div class="column">
+					<img class="demo" src="./images/thumbs/9-flitzwilliam-birdcy.jpg" onclick="currentSlide(9)" alt="flitzwilliam">
+				</div>
+			</div>
+		</div>
+
+		<!-- END MODAL GALLERY -->
 
 		<!-- RSVP -->
 		<section id="contact">
@@ -188,6 +288,6 @@
 			www.birlumbus.biz &nbsp;|&nbsp; &copy; 2020
 		</div>
 		<!-- END FOOTER -->
-
+		<script type="text/javascript" src="./js/main.js"></script>
 	</body>
 </html>
