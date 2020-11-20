@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  	<title>Academy Cinemas</title>
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,8 +10,6 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <title>
-    Academy Cinemas</title>
   </head>
   <body>
     <div class="container">
@@ -128,18 +128,86 @@
 			</div>
 		</div>
 
-		<!-- Deals -->
+		<!-- Jumbotron Heading -->
 
-		<div class="text-center">
-			<br><br>
-			<form>
-				<h1 id="deals" class="">Sign up for Movie Club Rewards!</h1>
-				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			</form>
+		<div class="jumbotron jumbotron-fluid bg-secondary mt-5 text-center">
+			<div class="container">
+				<h1 class="display-4 hidden-sm-down" style="color: #fff; text-transform: uppercase;">Movie Deals</h1>
+				<p class="lead" style="color: #fff;"> Check out our monthly deals!</p>
+				<button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#register">Register</button>
+			</div>
 		</div>
+
+		<!-- Signup Form -->
+
+		<div class="row">
+			<div class="container text-center col-and-6" id="deals">
+				<div class="container text-center">
+					<h1 class="display-5 my-4 col-lg-auto text-primary">Don't miss out on movie news!</h1>
+					<div class="input-group mb-5 input-group-sm">
+						<input type="text" class="form-control" placeholder="Email">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-secondary btn-info popover-dismiss" data-container="body" data-toggle="popover" data-placement="top" data-content="Clicking this button will get you all the latest movie news straight to your inbox!">Sign Up</button>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Form Modal -->
+
+		<div class="modal fade" tabindex="-1" id="register" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Register to revieve movie deals</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+
+						<form>
+							<fieldset class="form-group">
+								<label for="firstname">First Name:</label>
+								<input type="text" class="form-control" id="firstname" placeholder="First Name">
+							</fieldset>
+							<fieldset class="form-group">
+								<label for="firstname">Last Name:</label>
+								<input type="text" class="form-control" id="lastname" placeholder="Last Name">
+							</fieldset>
+							<fieldset class="form-group">
+								<label for="firstname">Email:</label>
+								<input type="text" class="form-control" id="email" placeholder="Email">
+							</fieldset>
+							<fieldset class="form-group">
+								<label for="firstname">Password:</label>
+								<input type="text" class="form-control" id="password" placeholder="Password">
+							</fieldset>
+							<fieldset>
+								<div class="dropdown">
+									<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">trigger self-destruct sequence?</button>
+									<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+										<a class="dropdown-item" href="https://lh3.googleusercontent.com/proxy/GMF8nXFb9Cv77L0YRITyxLJW9K0J17dFxI3oaNtydenJNxSM4xLut0Um-YWlYXXFOvPObg7oiHApsEraO47gOnu9pSqOpw">Sure</a>
+										<a class="dropdown-item" href="https://i.pinimg.com/originals/97/54/ab/9754ab1e86395ce3d0804f11e100a39c.jpg">Nah</a>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+
+
+
+
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Save changes</button>
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
 
 		<div class="container my-5">
 			<ul class="nav nav-inline">
@@ -171,5 +239,10 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+    <script>
+	$('.popover-dismiss').popover({
+		trigger: 'focus'
+	})
+    </script>
+</body>
 </html>
