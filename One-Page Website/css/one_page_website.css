@@ -86,6 +86,12 @@ section {
 	display: block;
 }
 
+.container1 {
+	margin: auto;
+	width: 660px;
+	padding: 10px;
+}
+
 .container {
 	padding-right: 15px;
 	padding-left: 15px;
@@ -111,6 +117,7 @@ section {
 
 .clearfix:after,
 .container:after,
+.container1:after,
 .navbar:after {
 	clear: both;
 	display: table;
@@ -147,7 +154,7 @@ section {
 	HOME SECTION STYLES
 -----------------------------------*/
 #home {
-	background: url(../images/living-room.jpg) no-repeat 50% 50%;
+	background: url(../images/living-room1.png) no-repeat 50% 50%;
 	background-attachment: fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -168,17 +175,16 @@ section {
 .head-main {
 	font-family: "Mr De Haviland", sans-serif;
 	font-size: 4.5em;
-	font-variant: ;
 	font-weight: 700;
-	position: relative;
-    top: 89px;
-    left: 21.5%;
 	text-shadow: 2px 4px 5px rgba(0,0,0,0.9);
-	color: #ff6060;
+	color: #ffdddd;
 	text-align: center;
 	line-height: 2;
-	border: 5px double #ff6060;
-	padding: 10px;
+	border: 5px double #c3ff4d;
+	border-radius: 22px;
+	padding: 3px 16px 0px 14px;
+	position: relative;
+	top: 115px;
 }
 
 .head-sub-main {
