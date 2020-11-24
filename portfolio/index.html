@@ -17,11 +17,7 @@
 		<a href="#About">About</a>
 		<a href="#GitHub">GitHub</a>
 		<a href="#Contact">Contact</a>
-	</div>
-
-<!-- Home -->
-		<br>
-		<br>
+	</div><br><br>
 
 <!-- Video -->
 	<div id="Home">
@@ -31,7 +27,7 @@
 		</video>
 	</div>
 
-<!-- Video text --> 
+<!-- text over video --> 
 	<div class="Video_Text"> 
 		<h1 style="color:white;">hey.</h1>
 		<h3 style="color:white;">my name is Rhodri.</h3>
@@ -45,7 +41,7 @@
 			</p> 
 	</div>
 
-<!-- About section -->
+<!-- About -->
 	<div class="Row" id="About"> 
 		<div class="Column_2"> <!-- Left column -->
 			<img src="Stylesheet/Images/portrait.jpg" alt="pic of me">
@@ -54,17 +50,17 @@
 		<div class="Column_1"> <!-- Right column -->
 			<h1>About</h2>
 				<div class="paragraph">
-					<p>
+					<p id="fadeIn1">
 						As a software developer I enjoy our jurisdiction over the bumbling 0's and 1's. Benevolent sovereign that I am, I find there are few greater pleasures than a well-ordered empire.
 					</p>
 				</div>
 				<div class="paragraph">
-					<p>
+					<p id="fadeIn2">
 						Of course, the efficacy of my reign is equal only to the variety of those subjects I govern. Under the tutelage of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer curriculum, I have brought into my kingdom HTML, CSS, JavaScript, SQL, Python, C# and more.
 					</p>
 				</div>
 				<div class="paragraph">
-					<p>
+					<p id="fadeIn3">
 						When I am not called away by my kingly duties, I enjoy video games, reading, and being out of doors. Should you wish to add a competent statesman to the administrative body of <i>your</i> digital commonwealth, I certainly would not find it amiss to be <a href="#Contact">contacted</a>.
 					</p>
 				</div>
@@ -72,12 +68,26 @@
 		</div>
 	</div>
 
-<!-- GitHub section -->
+<!-- GitHub Link -->
 	<div class="Row" id="GitHub">
-		<div class="Column_1" style="padding: 10%;"> <!-- Left column -->
-			<h1>My GitHub</h1>
-			<p>Artifacts of my hegemony (such as this website) can be found on Github: </p>
-			<p style="text-align:center;"><a href="https://github.com/turtelneck" target="_blank">github.com/turtelneck</a></span></p>
+		<div class="Column_1"> <!-- Left column -->
+			<p id="p_git">Artefacts of my hegemony (such as this website) can be found... </p>
+			<!-- popup box -->
+			<button class="open-btn" id="git_button" onclick="openForm()">...on Github</button>
+
+			<div class="hidden-btn-container Row" id="myForm">
+				<h1 id="h1_git">my favorites</h1>
+   				<div class="popup-Column_1">
+					<button type="submit" class="btn btn1">an example</button>
+					<button type="submit" class="btn btn2">another example</button>
+					<button type="submit" class="btn btn3">and another example</button>
+    			</div>
+  				<div class="popup-Column_2">
+ 				   	<button type="submit" class="btn btn4">an example</button>
+					<button type="submit" class="btn btn5">another example</button>
+					<button type="submit" class="btn btn6">and another example</button>
+				</div>
+			</div>
 		</div>
 		
 		<div class="Column_2"> <!-- Right column -->
@@ -87,6 +97,8 @@
 		</div>
 	</div>
 
+<!-- alt option: <p style="text-align:center;" id="fadeIn"><a href="https://github.com/turtelneck" target="_blank">github.com/turtelneck</a></p> -->
+
 <!-- Contact section -->
 	<div class="Row" id="Contact"> 
 		<div class="Column_3"> <!-- Contact image, left column -->
@@ -94,15 +106,17 @@
 		</div>
 	
 		<div class="Column_4"> <!-- Contact form, right "column" -->
-			<h1>Contact</h2> 
-				<form action="" method="get"> <!-- This specifies where to send the form data and how; it is left blank -->
-					<label>Name:</label>
-						<input type="text" placeholder="Please enter your name here">
-					<label>Email:</label>
-						<input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-					<label>Message:</label>
-						<input type="text" id="Message" name="Message" placeholder="Please write your message here">
-						<input type="submit" value="Submit">
+			<h1 id="ctkt">Contact</h1> 
+				<form action="" method="get" name="ctkt">
+					<label>name:</label>
+						<input type="text" id="Name" name="Name" placeholder="jot that name down, pal">
+					<label>email:</label>
+						<input type="email" id="Email" name="Email" placeholder="and your email, if you're feelin spicy">
+					<label>phone:</label>
+						<input type="tel" id="Phone" name="Phone" placeholder="or your phone, if you prefer">
+					<label>message:</label>
+						<input type="text" id="Message" name="Message" placeholder="this one's up to you. such freedom! what'll you write?">
+						<input type="submit" value="Submit" onclick="formValidation()">
 				</form>
 		</div>
 	</div>
@@ -113,6 +127,9 @@
 			<center>&copy rhodri,  <a href="https://learncodinganywhere.com/">aninboxforstuff@gmail.com</a></center><br>
 		</p>
 	</footer>
+
+<!-- JS link -->
+	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
 

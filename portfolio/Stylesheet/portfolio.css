@@ -1,4 +1,7 @@
-/* Body */
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
 }
@@ -44,6 +47,7 @@ body {
 	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
 	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
 	z-index: -1;
+	filter: saturate(2.5);
 }
 
 #centered {
@@ -71,6 +75,7 @@ body {
 	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
 	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
 	background-color: #f2f2f2;
+	background: rgba(242, 242, 242, 0.85);
 }
 
 .Column_2 {
@@ -98,10 +103,11 @@ body {
 	padding-top: 3%;
 	height: 450px;
 	background-color: #f2f2f2;
+	background: rgba(242, 242, 242, 0.85);
 }
 
 .Row:after { /* This inserts something after the content of selected elements */
-	content: ""; /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+	content: ""; /* ensures the footer doesn't overwrite a column */
 	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
@@ -162,16 +168,17 @@ img {
 }
 
 /* Contact form */
-input[type=text] { /* This covers the input sections of the contact form */
+input[type=text], [type=tel], [type=email] { /* This covers the input sections of the contact form */
 	width: 100%;
 	padding: 12px;
     border: 1px solid #ccc; /* We are setting a solid border and its colors */
     border-radius: 4px; 
     box-sizing: border-box;
     margin-top: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
     resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
-    font-family: Arial; 
+    font-family: Arial;
+    opacity: 1.0;
 }
 
 /* Submit button */
@@ -187,6 +194,7 @@ input[type=submit] { /* This covers the submit button for the contact form */
 	margin-left: auto;
 	margin-right: auto; 
 	font-family: Arial;
+	opacity: 1.0;
 
 	/*Hover off*/
 	transition: transform 0.2s;
@@ -203,10 +211,13 @@ input[type=submit]:hover {
 }
 
 /* Form elememt */
-form { 
-	background-color: #f2f2f2;
+form {
 	padding: 0% 10%;
 	font-family: "Trebuchet MS", Optima;
+}
+
+#ctkt {
+	margin-top: -2%; /* fits form to column */
 }
 
 /* Center align element hover effect */
@@ -243,4 +254,137 @@ img:hover {
 footer {
 	padding: 2%;
 	background-color:white;
+}
+
+/* fade-in effects */
+#fadeIn1 {
+	opacity: 1;
+	transition: 2s opacity;
+}
+
+#fadeIn1.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+#fadeIn2 {
+	opacity: 1;
+	transition: 2s opacity;
+}
+
+#fadeIn2.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+#fadeIn3 {
+	opacity: 1;
+	transition: 2s opacity;
+}
+
+#fadeIn3.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+#p_git {
+	opacity: 1;
+	transition: 2s opacity;
+	text-align: center;
+}
+
+#p_git.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+
+/* POP-UP FORM */
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-btn {
+	background-color: #555;
+	color: white;
+	border-radius: 4px;
+	padding: 16px 20px;
+	cursor: pointer;
+	width: 280px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.open-btn:hover {
+	background-color: #999999;
+	color: white;
+}
+
+#git_button {
+	font-size: 16px;
+}
+
+.hidden-btn-container {
+	max-width: 100%;
+	display: none;
+}
+
+/* button styles */
+.hidden-btn-container .btn {
+  padding: 16px 20px;
+  border: 1px solid;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  border-radius: 4px;
+}
+
+.btn1 {
+	background-color: #E2EAFC;
+}
+
+.btn2 {
+	background-color: #CCDBFD;
+}
+
+.btn3 {
+	background-color: #B6CCFE;
+}
+
+.btn4 {
+	background-color: #FFD6E2;
+}
+
+.btn5 {
+	background-color: #FFC2D4;
+}
+
+.btn6 {
+	background-color: #FF99B8;
+}
+
+.hidden-btn-container .btn:hover {
+	background-color: #e0ffcf;
+}
+
+#h1_git {
+	margin-top: 0%;
+	margin-block-end: 0%;
+	padding: 6px 0px 3px;
+}
+
+.popup-Column_1 {
+	float: left;  
+	width: 50%;
+	padding: 10px; 
+	padding-top: 2%;
+	height: 175px;
+	opacity: 1.0;
+}
+
+.popup-Column_2 {
+	float: left;
+	width: 50%;
+	padding: 10px;
+	padding-top: 2%;
+	height: 175px;
+	opacity: 1.0;
 }
