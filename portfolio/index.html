@@ -9,7 +9,7 @@
 	</head>
 
 <!-- Body -->
-<body class="Background"> 
+<body class="Background" id="Background"> 
 
 <!-- Navbar -->
 	<div class="Navbar">
@@ -21,9 +21,9 @@
 
 <!-- Video -->
 	<div id="Home">
-		<video autoplay muted loop id="Typing_Video"> <!-- Makes the video play automatically, on a loop and with no sound -->
+		<video autoplay muted loop id="Typing_Video">
 			<source src="Stylesheet/Video/big-sea.mp4" type="video/mp4">
-			Sorry, your browser doesn't support this embedded video. <!-- Display message if video fails to run -->
+			Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
 		</video>
 	</div>
 
@@ -35,7 +35,7 @@
 				<strong>
 					<center>
 						thanks for stopping by!<br>
-						welcome to my portfolio thingie.
+						welcome to my lil' corner of the interwebs.
 					</center>	
 				</strong>
 			</p> 
@@ -43,11 +43,11 @@
 
 <!-- About -->
 	<div class="Row" id="About"> 
-		<div class="Column_2"> <!-- Left column -->
+		<div class="Column_2">
 			<img src="Stylesheet/Images/portrait.jpg" alt="pic of me">
 		</div>
   
-		<div class="Column_1"> <!-- Right column -->
+		<div class="Column_1">
 			<h1>About</h2>
 				<div class="paragraph">
 					<p id="fadeIn1">
@@ -70,13 +70,13 @@
 
 <!-- GitHub Link -->
 	<div class="Row" id="GitHub">
-		<div class="Column_1"> <!-- Left column -->
+		<div class="Column_1" id="git_column">
 			<p id="p_git">Artefacts of my hegemony (such as this website) can be found... </p>
 			<!-- popup box -->
-			<button class="open-btn" id="git_button" onclick="openForm()">...on Github</button>
+			<button class="open-btn" id="git_button" onclick="openForm();yelling();">...on Github</button>
 
 			<div class="hidden-btn-container Row" id="myForm">
-				<h1 id="h1_git">my favorites</h1>
+				<h1 id="h1_git">some of my favorite projects:</h1>
    				<div class="popup-Column_1">
 					<button type="submit" class="btn btn1">an example</button>
 					<button type="submit" class="btn btn2">another example</button>
@@ -87,33 +87,32 @@
 					<button type="submit" class="btn btn5">another example</button>
 					<button type="submit" class="btn btn6">and another example</button>
 				</div>
+				<p id="popup_p">(or heck, just click the turtle to see everything)</p>
 			</div>
 		</div>
 		
-		<div class="Column_2"> <!-- Right column -->
+		<div class="Column_2">
 			<a href="https://github.com/turtelneck" target="_blank">
 				<img src="Stylesheet/Images/GitHub.jpg" alt="GitHub">
 			</a>
 		</div>
 	</div>
 
-<!-- alt option: <p style="text-align:center;" id="fadeIn"><a href="https://github.com/turtelneck" target="_blank">github.com/turtelneck</a></p> -->
-
 <!-- Contact section -->
 	<div class="Row" id="Contact"> 
-		<div class="Column_3"> <!-- Contact image, left column -->
+		<div class="Column_3">
 			<img src="Stylesheet/Images/me-as-charlie-brown_copy.png" alt="me_as_charlie_brown">
 		</div>
 	
-		<div class="Column_4"> <!-- Contact form, right "column" -->
+		<div class="Column_4">
 			<h1 id="ctkt">Contact</h1> 
-				<form action="" method="get" name="ctkt">
+				<form action="https://formspree.io/f/mqkgdeep" method="POST" name="ctkt">
 					<label>name:</label>
 						<input type="text" id="Name" name="Name" placeholder="jot that name down, pal">
 					<label>email:</label>
 						<input type="email" id="Email" name="Email" placeholder="and your email, if you're feelin spicy">
 					<label>phone:</label>
-						<input type="tel" id="Phone" name="Phone" placeholder="or your phone, if you prefer">
+						<input type="tel" id="Phone" name="Phone" placeholder="and/or phone, if you prefer">
 					<label>message:</label>
 						<input type="text" id="Message" name="Message" placeholder="this one's up to you. such freedom! what'll you write?">
 						<input type="submit" value="Submit" onclick="formValidation()">
@@ -121,16 +120,16 @@
 		</div>
 	</div>
 	
-<!-- Footer section -->
+<!-- Footer -->
 	<footer>
 		<p>
-			<center>&copy rhodri,  <a href="https://learncodinganywhere.com/">aninboxforstuff@gmail.com</a></center><br>
+			<center>&copy; rhodri,  aninboxforstuff@gmail.com</center><br>
 		</p>
 	</footer>
 
-<!-- JS link -->
-	<script type="text/javascript" src="js/main.js"></script>
+	<div id="lightning_1"></div>
 
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

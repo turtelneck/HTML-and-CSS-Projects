@@ -6,7 +6,6 @@ body {
 	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
 }
 
-/* Navbar */
 .Navbar {
 	overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
 	background-color: black; /* This colors the navbar black */
@@ -16,7 +15,6 @@ body {
 	z-index: 1; /*This ensures other elements don't display over the navbar */
 }
 
-/* Navbar text */
 .Navbar a {
 	float: left; /* This specifies that the text floats on the left on the navbar */
 	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
@@ -28,19 +26,16 @@ body {
 	text-align: center; /* This centers the text within its container */
 }
 
-/* Navbar hover effect */
 .Navbar a:hover {
 	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
 	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
 	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
-/* Navbar home button */
 .Navbar a.active { /* The active selector styles a link */
   background-color: darkgray;  /* This specifies the background color behind the Home button on the navbar */ 
 }
 
-/* Video */
 #Typing_Video {
 	position: fixed; /* This fixes our video to the page  */
 	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
@@ -54,7 +49,6 @@ body {
 	text-align: center;
 }
 
-/* Text over the video */ 
 .Video_Text { 
 	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
 	color: white; 
@@ -78,11 +72,14 @@ body {
 	background: rgba(242, 242, 242, 0.85);
 }
 
+#git_column {
+	padding-top: 1.3%;
+}
+
 .Column_2 {
 	float: left;
 	width: 50%;
 	padding: 10px;
-	padding-top: 1.9%;
 	height: 400px;
 	background-color: #4d4d4d;
 }
@@ -91,7 +88,6 @@ body {
 	float: left;
 	width: 50%;
 	padding: 10px;
-	padding-top: 1%;
 	height: 450px;
 	background-color: #4d4d4d;
 }
@@ -100,7 +96,7 @@ body {
 	float: left;  
 	width: 50%;
 	padding: 10px;
-	padding-top: 3%;
+	padding-top: 2%;
 	height: 450px;
 	background-color: #f2f2f2;
 	background: rgba(242, 242, 242, 0.85);
@@ -112,7 +108,6 @@ body {
 	clear: both; /* This clears any other elements from floating on the left or the right of an element */
 }
 
-/* Heading elements */
 h1 {
 	font-family: "Trebuchet MS", Optima; 
 	text-align: center;
@@ -126,16 +121,13 @@ h3 {
 	color: #1a1a1a;
 }
 
-/* Paragraph elements */
 p {
 	font-family: Arial;
 	text-align: justify;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding: 0px 20px;
 	transition: scale(1.0);
 }
 
-/* Center align elements - this embraces all centered text */
 center {
 	font-family: Arial;
 	text-align: center;
@@ -145,29 +137,24 @@ center {
 	padding-right: 20px;
 }
 
-/* Anchor elements */
 a {
-	color: blue; /* We are ensuring all links are blue */
+	color: blue;
 }
 
-/* Quotation elements */
 q {
 	font-style: italic;
 	font-weight: bold;
 }
 
-/* Image elements */
 img {
 	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* This causes our images to have slightly rounded edges */
     max-width: 100%; 
     height: 100%; 
-	margin-left: auto; /* This in combination with margin-right: auto centers our images */
-    margin-right: auto;
+	margin: auto;
 	display: block;	/* By specifying block display we can ensure our images are able to be centered */
 }
 
-/* Contact form */
 input[type=text], [type=tel], [type=email] { /* This covers the input sections of the contact form */
 	width: 100%;
 	padding: 12px;
@@ -181,7 +168,6 @@ input[type=text], [type=tel], [type=email] { /* This covers the input sections o
     opacity: 1.0;
 }
 
-/* Submit button */
 input[type=submit] { /* This covers the submit button for the contact form */
 	background-color: black;
 	color: white;
@@ -200,7 +186,6 @@ input[type=submit] { /* This covers the submit button for the contact form */
 	transition: transform 0.2s;
 }
 
-/* Hover effect for submit button */
 input[type=submit]:hover {
 	background-color: white; /* Makes the background turn white when hovered over */
 	color: black; /* Makes the font turn black when hovered over */
@@ -210,7 +195,6 @@ input[type=submit]:hover {
 	border: solid 1px black;
 }
 
-/* Form elememt */
 form {
 	padding: 0% 10%;
 	font-family: "Trebuchet MS", Optima;
@@ -220,19 +204,16 @@ form {
 	margin-top: -2%; /* fits form to column */
 }
 
-/* Center align element hover effect */
 center:hover {
     transition: transform 0.1s;
 	transform: scale(1.01);
 }
 
-/* Paragraph element hover effect */
 p:hover {	
     transition: transform 0.1s;
 	transform: scale(1.01);
 }
 
-/* Heading 1 element hover effect */
 h1:hover {
 	transition: transform 0.1s;
 	transform: scale(1.01);
@@ -243,20 +224,17 @@ h3:hover {
 	transform: scale(1.01);
 }
 
-/* Image element hover effects */
 img:hover {
 	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
     transition: transform 0.1s;
 	transform: scale(1.01);
 }
 
-/* Footer element */
 footer {
 	padding: 2%;
 	background-color:white;
 }
 
-/* fade-in effects */
 #fadeIn1 {
 	opacity: 1;
 	transition: 2s opacity;
@@ -300,7 +278,6 @@ footer {
 
 
 /* POP-UP FORM */
-/* Button used to open the contact form - fixed at the bottom of the page */
 .open-btn {
 	background-color: #555;
 	color: white;
@@ -327,14 +304,16 @@ footer {
 	display: none;
 }
 
-/* button styles */
 .hidden-btn-container .btn {
-  padding: 16px 20px;
-  border: 1px solid;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  border-radius: 4px;
+	padding: 15px 20px;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom:10px;
+	border-radius: 4px;
+}
+
+.hidden-btn-container .btn:hover {
+	background-color: #fffeb3;
 }
 
 .btn1 {
@@ -361,12 +340,8 @@ footer {
 	background-color: #FF99B8;
 }
 
-.hidden-btn-container .btn:hover {
-	background-color: #e0ffcf;
-}
-
 #h1_git {
-	margin-top: 0%;
+	margin-top: 1%;
 	margin-block-end: 0%;
 	padding: 6px 0px 3px;
 }
@@ -375,7 +350,7 @@ footer {
 	float: left;  
 	width: 50%;
 	padding: 10px; 
-	padding-top: 2%;
+	padding-top: 1.2%;
 	height: 175px;
 	opacity: 1.0;
 }
@@ -384,7 +359,41 @@ footer {
 	float: left;
 	width: 50%;
 	padding: 10px;
-	padding-top: 2%;
+	padding-top: 1.2%;
 	height: 175px;
 	opacity: 1.0;
+}
+
+#popup_p {
+	text-align: center;
+	margin-top: 188px;
+	font-size: 13px;
+	opacity: 1;
+	transition: 2s opacity;
+}
+
+#popup_p.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+/* Lightning FX */
+.Blink {
+	animation: blink 0.3s linear;
+}
+
+@keyframes blink {
+	15% {
+		opacity: 0;
+	}
+}
+
+.lightning_1 {
+	position: fixed;
+	pointer-events: none;
+	top: 0;
+	left: 30%;
+	width: 100%;
+	height: 100%;
+	background: url("images/Lightning1.png") no-repeat;
 }
