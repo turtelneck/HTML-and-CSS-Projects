@@ -29,7 +29,7 @@ function formValidation() {
 	let msg = ctkt["Message"].value;
 
 	if (msg == "") {
-		alert("you sure you don't want to say anything?")
+		alert("you sure you don't want to say anything?");
 	}
 }
 
@@ -61,55 +61,74 @@ function fadeIn() {
 let git_button = document.getElementById('git_button');
 git_button.addEventListener('click', fadeIn);
 
-// silly happy fun times in the popup
+// palpatine code
 let zap1 = document.getElementById('lightning_1');
+let zap2 = document.getElementById('lightning_2');
+let zap3 = document.getElementById('lightning_3'); 
+// (could make this work with zap element, used 3 for more potential flexibility)
 let count = 0;
 
-function yelling() {
+function order66() {
 	count++;
 	console.log(count);
 
-	if (count === 9) {
-		turtleText.innerHTML = "I see you too have felt the call of the button.";
-	} else if (count === 11) {
+	if (count === 5) {
+		turtleText.innerHTML = "I see you have felt the button's call";
+	} else if (count === 7) {
 		turtleText.innerHTML = "I mean, feel the the <i>power</i> it's given you over this popup.";
-	} else if (count === 13) {
+	} else if (count === 9) {
 		turtleText.innerHTML = "...and your power will only <i>grow</i> with more clicks!";
-	} else if (count === 15) {
+	} else if (count === 11) {
 		turtleText.innerHTML = "further clicking can fulfill your wildest dreams!";
-	} else if (count === 17) {
+	} else if (count === 13) {
 		turtleText.innerHTML = "yes! more! your thirst cannot be satisfied!";
-	} else if (count === 19) {
+	} else if (count === 15) {
 		turtleText.innerHTML = "soon you will surpass all other button clickers!";
-	} else if (count === 21) {
+	} else if (count === 17) {
 		turtleText.innerHTML = "yeeesss... yes! you are <i>right</i> to do this! it is your <i>destiny</i>!";
-	} else if (count === 23) {
+	} else if (count === 19) {
 		turtleText.innerHTML = "fuel your passions into your index finger! feel the fire rise within!";
-	} else if (count === 25) {
+	} else if (count === 21) {
 		turtleText.innerHTML = "heh heh heh heh...";
 		blink();
-	} else if (count === 27) {
+	} else if (count === 23) {
 		turtleText.innerHTML = "Mwahahahahahahahahaaaaa!";
 		blink();
-	} else if (count === 29) {
-		turtleText.innerHTML = "<i>UN</i>";
-		blink();
-		zap1.className = 'lightning_1'; // adds the lightning
-		setTimeout(function () { blink(); }, 301);
-	} else if (count === 31) {
+	} else if (count === 25) {
 		turtleText.innerHTML = "<i>UNLIMITED</i>";
 		blink();
-		setTimeout(function () { blink(); }, 301);
-	} else if (count === 33) {
-		turtleText.innerHTML = "<i>UNLIMITED POWEEEEEEEEEEEEEEEEER!!!</i>"
+		zap3.className = 'lightning_3'; // adds the lightning
+		setTimeout(function () { blink(); }, 300);
+		setTimeout(function () { zap3.className = ''; zap2.className = 'lightning_2'; }, 400);
+		setTimeout(function () { blink(); }, 600);
+		setTimeout(function () { zap2.className = ''; }, 700);
+	} else if (count === 27) {
+		turtleText.innerHTML = "<i>UNLIMITED POWEEEEEEEEEEEEEEEEER!!!</i>";
 		blink();
-		setTimeout(function () { blink(); }, 301);
-		setTimeout(function () { blink(); }, 601);
+		zap1.className = 'lightning_1';
+		setTimeout(function () { blink(); }, 300);
+		setTimeout(function () { zap1.className = ''; zap3.className = 'lightning_3'; }, 400);
+		setTimeout(function () {
+			// final blink, final changes (palpatine unleashed)
+			blink();
+			zap3.className = '';
+			document.getElementById('me').src = 'Stylesheet/Images/family-man.jpg';
+			document.getElementById('git').src = 'Stylesheet/Images/palpatine-zap.jpg';
+			document.getElementById('mailbox').src = 'Stylesheet/Images/tony-boy.jpg';
+			document.getElementById('Home').style.opacity = '0';
+			document.getElementById('Home').style.pointerEvents = 'none';
+			document.getElementById('Background').style.backgroundImage = 'url(stylesheet/images/palpatine-shark.gif)';
+		}, 600);
 	}
 	
 	function blink() {
 		let target = document.getElementById('Background');
-		target.className = 'Background'; // reset class
+		target.className = 'Background'; // readies element for blink
 		setTimeout(function () { target.className = "Background Blink" }, 5);
 	}
 }
+
+
+
+
+// have a 'please turn off the palpatine' button

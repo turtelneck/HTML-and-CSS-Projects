@@ -20,11 +20,13 @@
 	</div><br><br>
 
 <!-- Video -->
-	<div id="Home">
-		<video autoplay muted loop id="Typing_Video">
-			<source src="Stylesheet/Video/big-sea.mp4" type="video/mp4">
-			Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
-		</video>
+	<div id="palpatine">
+		<div id="Home">
+			<video autoplay muted loop id="Typing_Video">
+				<source src="Stylesheet/Video/big-sea.mp4" type="video/mp4">
+				Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
+			</video>
+		</div>
 	</div>
 
 <!-- text over video --> 
@@ -44,7 +46,7 @@
 <!-- About -->
 	<div class="Row" id="About"> 
 		<div class="Column_2">
-			<img src="Stylesheet/Images/portrait.jpg" alt="pic of me">
+			<img src="Stylesheet/Images/portrait.jpg" id="me" alt="pic of me">
 		</div>
   
 		<div class="Column_1">
@@ -73,7 +75,7 @@
 		<div class="Column_1" id="git_column">
 			<p id="p_git">Artefacts of my hegemony (such as this website) can be found... </p>
 			<!-- popup box -->
-			<button class="open-btn" id="git_button" onclick="openForm();yelling();">...on Github</button>
+			<button class="open-btn" id="git_button" onclick="openForm();order66();">...on Github</button>
 
 			<div class="hidden-btn-container Row" id="myForm">
 				<h1 id="h1_git">some of my favorite projects:</h1>
@@ -93,7 +95,7 @@
 		
 		<div class="Column_2">
 			<a href="https://github.com/turtelneck" target="_blank">
-				<img src="Stylesheet/Images/GitHub.jpg" alt="GitHub">
+				<img src="Stylesheet/Images/GitHub.jpg" id="git" alt="GitHub">
 			</a>
 		</div>
 	</div>
@@ -101,7 +103,7 @@
 <!-- Contact section -->
 	<div class="Row" id="Contact"> 
 		<div class="Column_3">
-			<img src="Stylesheet/Images/me-as-charlie-brown_copy.png" alt="me_as_charlie_brown">
+			<img src="Stylesheet/Images/me-as-charlie-brown_copy.png" id="mailbox" alt="me_as_charlie_brown">
 		</div>
 	
 		<div class="Column_4">
@@ -128,6 +130,8 @@
 	</footer>
 
 	<div id="lightning_1"></div>
+	<div id="lightning_2"></div>
+	<div id="lightning_3"></div>
 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
