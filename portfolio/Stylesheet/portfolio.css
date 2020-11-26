@@ -3,45 +3,54 @@ html {
 }
 
 body {
-	/*background-image: url("images/palpatine-shark.gif");*/
-	margin: 0%; /* This ensures our site displays all the way to the edge of the browser screen */
+	margin: 0%;
 }
 
 .Navbar {
-	overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-	background-color: black; /* This colors the navbar black */
-	position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
-	top: 0; /* This ensures no space is displayed above the navbar */
-	width: 100%; /* This makes the navbar span the entire width of the page */
-	z-index: 1; /*This ensures other elements don't display over the navbar */
+	overflow: hidden; 
+	background-color: black; 
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	animation: slideFromRight 0.8s;
+}
+
+@keyframes slideFromRight {
+	0% {
+		right: -100vw;
+	}
+	100% {
+		right: 0vw;
+	}
 }
 
 .Navbar a {
-	float: left; /* This specifies that the text floats on the left on the navbar */
-	display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-	color: white; /* This is the font color for text on our navbar */
-	padding: 14px 16px; /* This adds padding around our text */
-	text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
-	font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
-	font-size: 20px; /* This specifies the font size for text on our navbar */
-	text-align: center; /* This centers the text within its container */
+	float: left;
+	display: block;
+	color: white; 
+	padding: 14px 16px; 
+	text-decoration: none; 
+	font-family: Avant Garde, Helvetica; 
+	font-size: 20px; 
+	text-align: center;
 }
 
 .Navbar a:hover {
-	background-color: #F4F4F4; /*  This defines the background color that will display when you hover over the text on the navbar */
-	color: black; /* This defines the font color that will display when you hover over the text on the navbar */
-	font-weight: bold; /* This makes the text on the navbar bold when hovered over */
+	background-color: #F4F4F4;
+	color: black;
+	font-weight: bold;
 }
 
-.Navbar a.active { /* The active selector styles a link */
-  background-color: darkgray;  /* This specifies the background color behind the Home button on the navbar */ 
+.Navbar a.active {
+  background-color: darkgray;
 }
 
 #Typing_Video {
-	position: fixed; /* This fixes our video to the page  */
-	right: 0; /* This ensures no space between the edge of the video and the edge of the page */
-	bottom: 0; /* This ensures no space between the edge of the video and the edge of the page */
-	min-width: 100%; /* This ensures the video is displayed across the full width of the page */
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
 	z-index: -1;
 	filter: saturate(2.5);
 }
@@ -51,24 +60,33 @@ body {
 }
 
 .Video_Text { 
-	background: rgba(0, 0, 0, 0.5); /* This provides a semi-transparent background for the text to sit over */
-	color: white; 
+	background: rgba(0, 0, 0, 0.5);
 	width: 100%;
-	padding: 20px; /* This adds padding around the text so that the background goes slightly beyond the text */
+	padding: 20px;
 	margin-top: 23%;
+	position: relative;
+	animation: slideFromLeft 0.8s;
 }
 
-/* Table - this section covers the styling of the columns and rows within our table */
-* { /* The asterisk is a universal selector that applies this effect to all elements on the page */
-	box-sizing: border-box; /* This creates a box with a border within which we will place most of our text */
+@keyframes slideFromLeft {
+	0% {
+		left: -100vw;
+	}
+	100% {
+		left: 0vw;
+	}
+}
+
+* { 
+	box-sizing: border-box;
 }
 
 .Column_1 {
 	float: left;  
-	width: 50%; /* This ensures one column takes up half the page width */
+	width: 50%;
 	padding: 10px; 
-	padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
-	height: 400px; /* This sets the height of our column at 400 pixels - if you change the text within the columns, you will need to adjust the column heights accordingly */
+	padding-top: 3%;
+	height: 400px;
 	background-color: #f2f2f2;
 	background: rgba(242, 242, 242, 0.85);
 }
@@ -103,16 +121,20 @@ body {
 	background: rgba(242, 242, 242, 0.85);
 }
 
-.Row:after { /* This inserts something after the content of selected elements */
-	content: ""; /* ensures the footer doesn't overwrite a column */
-	display: table; /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
-	clear: both; /* This clears any other elements from floating on the left or the right of an element */
+.Row {
+	position: relative;
+}
+
+.Row:after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 h1 {
 	font-family: "Trebuchet MS", Optima; 
 	text-align: center;
-	margin-top: 3%; /* We are adding a small margin above the headings */
+	margin-top: 3%;
 	color: #1a1a1a;
 }
 
@@ -148,28 +170,28 @@ q {
 }
 
 img {
-	filter: grayscale(75%); /* This rids our pictures of 75% of their color */
-    border-radius: 8px; /* This causes our images to have slightly rounded edges */
+	filter: grayscale(40%);
+    border-radius: 8px;
     max-width: 100%; 
     height: 100%; 
 	margin: auto;
-	display: block;	/* By specifying block display we can ensure our images are able to be centered */
+	display: block;
 }
 
-input[type=text], [type=tel], [type=email] { /* This covers the input sections of the contact form */
+input[type=text], [type=tel], [type=email] {
 	width: 100%;
 	padding: 12px;
-    border: 1px solid #ccc; /* We are setting a solid border and its colors */
+    border: 1px solid #ccc;
     border-radius: 4px; 
     box-sizing: border-box;
     margin-top: 6px;
     margin-bottom: 13px;
-    resize: vertical; /* This specifies how an element is resized; vertical allows the user to resize the height of the element */
+    resize: vertical;
     font-family: Arial;
     opacity: 1.0;
 }
 
-input[type=submit] { /* This covers the submit button for the contact form */
+input[type=submit] {
 	background-color: black;
 	color: white;
 	font-weight: bold;
@@ -188,11 +210,11 @@ input[type=submit] { /* This covers the submit button for the contact form */
 }
 
 input[type=submit]:hover {
-	background-color: white; /* Makes the background turn white when hovered over */
-	color: black; /* Makes the font turn black when hovered over */
-	font-weight: bold; /* Makes the font bold when hovered over */
-	transform: scale(1.15); /* Makes the button increase 1.5 times in size */ 
-	transition: transform 0.2s; /* Makes the transform effect last 1.5 seconds from start to finish */
+	background-color: white;
+	color: black;
+	font-weight: bold;
+	transform: scale(1.15);
+	transition: transform 0.2s;
 	border: solid 1px black;
 }
 
@@ -202,7 +224,7 @@ form {
 }
 
 #ctkt {
-	margin-top: -2%; /* fits form to column */
+	margin-top: -2%;
 }
 
 center:hover {
@@ -226,7 +248,7 @@ h3:hover {
 }
 
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+	filter: grayscale(5%);
     transition: transform 0.1s;
 	transform: scale(1.01);
 }
@@ -236,9 +258,40 @@ footer {
 	background-color:white;
 }
 
+/* FadeIn FX */
+#hey {
+	opacity: 1;
+	transition: 2s .8s opacity;
+}
+
+#hey.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+#my_name {
+	opacity: 1;
+	transition: 2s .8s opacity;
+}
+
+#my_name.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
+#welcome {
+	opacity: 1;
+	transition: 2s .8s opacity;
+}
+
+#welcome.fade-out {
+	opacity: 0;
+	transition: none;
+}
+
 #fadeIn1 {
 	opacity: 1;
-	transition: 2s opacity;
+	transition: 2s .8s opacity;
 }
 
 #fadeIn1.fade-out {
@@ -248,7 +301,7 @@ footer {
 
 #fadeIn2 {
 	opacity: 1;
-	transition: 2s opacity;
+	transition: 2s .8s opacity;
 }
 
 #fadeIn2.fade-out {
@@ -258,7 +311,7 @@ footer {
 
 #fadeIn3 {
 	opacity: 1;
-	transition: 2s opacity;
+	transition: 2s .8s opacity;
 }
 
 #fadeIn3.fade-out {
@@ -268,8 +321,9 @@ footer {
 
 #p_git {
 	opacity: 1;
-	transition: 2s opacity;
+	transition: 2s .8s opacity;
 	text-align: center;
+	height: 18px;
 }
 
 #p_git.fade-out {
@@ -384,7 +438,7 @@ footer {
 }
 
 @keyframes blink {
-	15% {
+	100% {
 		opacity: 0;
 	}
 }
@@ -393,28 +447,28 @@ footer {
 	position: fixed;
 	pointer-events: none;
 	top: 0;
-	left: 30%;
+	left: 20vw;
 	width: 100%;
 	height: 100%;
-	background: url("images/Lightning1.png") no-repeat;
+	background: url("images/lightning1.png") no-repeat;
 }
 
 .lightning_2 {
 	position: fixed;
 	pointer-events: none;
 	top: 0;
-	left: 30%;
+	left: 20vw;
 	width: 100%;
 	height: 100%;
-	background: url("images/Lightning2.png") no-repeat;
+	background: url("images/lightning2.png") no-repeat;
 }
 
 .lightning_3 {
 	position: fixed;
 	pointer-events: none;
 	top: 0;
-	left: 30%;
+	left: 20vw;
 	width: 100%;
 	height: 100%;
-	background: url("images/Lightning3.png") no-repeat;
+	background: url("images/lightning3.png") no-repeat;
 }

@@ -5,7 +5,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Rhodri</title>
-		<link rel="stylesheet" type="text/css" href="./Stylesheet/portfolio.css">
+		<link rel="stylesheet" type="text/css" href="./stylesheet/portfolio.css">
 	</head>
 
 <!-- Body -->
@@ -23,7 +23,7 @@
 	<div id="palpatine">
 		<div id="Home">
 			<video autoplay muted loop id="Typing_Video">
-				<source src="Stylesheet/Video/big-sea.mp4" type="video/mp4">
+				<source src="stylesheet/video/big-sea.mp4" type="video/mp4">
 				Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
 			</video>
 		</div>
@@ -31,11 +31,11 @@
 
 <!-- text over video --> 
 	<div class="Video_Text"> 
-		<h1 style="color:white;">hey.</h1>
-		<h3 style="color:white;">my name is Rhodri.</h3>
+		<h1 id="hey" style="color:white;">hey.</h1>
+		<h3 id="my_name" style="color:white;">my name is Rhodri.</h3>
 			<p> 
 				<strong>
-					<center>
+					<center id="welcome" style="color:white;">
 						thanks for stopping by!<br>
 						welcome to my lil' corner of the interwebs.
 					</center>	
@@ -46,7 +46,7 @@
 <!-- About -->
 	<div class="Row" id="About"> 
 		<div class="Column_2">
-			<img src="Stylesheet/Images/portrait.jpg" id="me" alt="pic of me">
+			<img src="stylesheet/images/portrait.jpg" id="me" alt="pic of me">
 		</div>
   
 		<div class="Column_1">
@@ -79,15 +79,15 @@
 
 			<div class="hidden-btn-container Row" id="myForm">
 				<h1 id="h1_git">some of my favorite projects:</h1>
-   				<div class="popup-Column_1">
-					<button type="submit" class="btn btn1">an example</button>
-					<button type="submit" class="btn btn2">another example</button>
-					<button type="submit" class="btn btn3">and another example</button>
+   				<div id="popup-Column_1" class="popup-Column_1">
+					<button type="submit" id="btn1" class="btn btn1">an example</button>
+					<button type="submit" id="btn2" class="btn btn2">another example</button>
+					<button type="submit" id="btn3" class="btn btn3">and another example</button>
     			</div>
-  				<div class="popup-Column_2">
- 				   	<button type="submit" class="btn btn4">an example</button>
-					<button type="submit" class="btn btn5">another example</button>
-					<button type="submit" class="btn btn6">and another example</button>
+  				<div id="popup-Column_2" class="popup-Column_2">
+ 				   	<button type="submit" id="btn4" class="btn btn4">an example</button>
+					<button type="submit" id="btn5" class="btn btn5">another example</button>
+					<button type="submit" id="btn6" class="btn btn6">and another example</button>
 				</div>
 				<p id="popup_p">(or heck, just click the turtle to see everything)</p>
 			</div>
@@ -95,7 +95,7 @@
 		
 		<div class="Column_2">
 			<a href="https://github.com/turtelneck" target="_blank">
-				<img src="Stylesheet/Images/GitHub.jpg" id="git" alt="GitHub">
+				<img src="stylesheet/images/github.jpg" id="git" alt="GitHub">
 			</a>
 		</div>
 	</div>
@@ -103,12 +103,12 @@
 <!-- Contact section -->
 	<div class="Row" id="Contact"> 
 		<div class="Column_3">
-			<img src="Stylesheet/Images/me-as-charlie-brown_copy.png" id="mailbox" alt="me_as_charlie_brown">
+			<img src="stylesheet/images/me-as-charlie-brown_copy.png" id="mailbox" alt="me_as_charlie_brown">
 		</div>
 	
 		<div class="Column_4">
 			<h1 id="ctkt">Contact</h1> 
-				<form action="https://formspree.io/f/mqkgdeep" method="POST" name="ctkt">
+				<form action="https://formspree.io/f/mqkgdeep" onsubmit="return formValidation()" method="POST" name="ctkt">
 					<label>name:</label>
 						<input type="text" id="Name" name="Name" placeholder="jot that name down, pal">
 					<label>email:</label>
@@ -117,7 +117,7 @@
 						<input type="tel" id="Phone" name="Phone" placeholder="and/or phone, if you prefer">
 					<label>message:</label>
 						<input type="text" id="Message" name="Message" placeholder="this one's up to you. such freedom! what'll you write?">
-						<input type="submit" value="Submit" onclick="formValidation()">
+						<input type="submit" value="Submit">
 				</form>
 		</div>
 	</div>
