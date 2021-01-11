@@ -1,5 +1,5 @@
 <body>
-	<p>The note-worthy projects in this folder: </p>
+	<p>This depository's noteworthy projects: </p>
 		<ul>
 			<li>
 				<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/One-Page%20Website">
