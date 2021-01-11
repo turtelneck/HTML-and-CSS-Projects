@@ -19,7 +19,7 @@
 		</ul>
 
 	Birlumbus Collection of Fine Art
-		The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons, no doubt, with exceptionally refined taste.
+		The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons with exceptionally refined taste.
 
 	Academy Cinemas
 		This is an example website for a movie theater, makiing use of bootraps components.
