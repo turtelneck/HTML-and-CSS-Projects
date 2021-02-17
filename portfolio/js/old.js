@@ -2,7 +2,7 @@
 document.getElementById('fadeIn1').className += 'fade-out';
 document.getElementById('fadeIn2').className += 'fade-out';
 document.getElementById('fadeIn3').className += 'fade-out';
-document.getElementById('message-when-closed').className += 'fade-out';
+document.getElementById('p_git').className += 'fade-out';
 document.getElementById('hey').className += 'fade-out';
 document.getElementById('my_name').className += 'fade-out';
 document.getElementById('welcome').className += 'fade-out';
@@ -51,71 +51,46 @@ function formValidation() {
 }
 
 // github box
-let popupBackground = document.getElementById('popup-background');
+let p_git = document.getElementById('p_git');
 let formOpen = false;
 
 function openForm() {
 	if (formOpen) {
-		popupBackground.style.height = "70px";
-		document.getElementById("my-form").style.display = "none";
+		document.getElementById("myForm").style.display = "none";
+		document.getElementById("encouragement").style.display = "block";
+		p_git.innerHTML = " ";
 		formOpen = false;
 	} else {
-		popupBackground.style.height = "326px";
-		document.getElementById("my-form").style.display = "block";
+		document.getElementById("myForm").style.display = "block";
+		document.getElementById("encouragement").style.display = "none";
 		formOpen = true;
 	}
 }
 
+// fade in text at the bottom of the github box
+let turtleText = document.getElementById('popup_p');
+turtleText.className += 'fade-out';
+let fadeCounter = 0; // ensures function only runs once
+// we fade this element in twice, depending on how many times the button is clicked
+// we only want to delay the first time it's clicked
+function fadeIn() {
+	while (fadeCounter === 0) {
+		fadeCounter++;
+		setTimeout(function () { callback(); }, 1*1000);
+
+		function callback() {
+			turtleText.classList.remove('fade-out');
+		}
+	}
+}
+
+let popup_btn = document.getElementById('popup_btn');
+popup_btn.addEventListener('click', fadeIn);
+
 // the following is all the palpatine code
-let msgList = [
-	"",
-	"Fun, right? Go ahead, have another click.",
-	"You're quite good at this! Click again.",
-	"I can see you are no ordinary user. Please, click again.",
-	"I've removed those pesky buttons. You require focus! <br/>Click again.",
-	"Good, very good! Feel the satisfaction of each click. Again!",
-	"Yes, you are doing well. Now, again.",
-	"Do you feel it? Your power over this button grows. Click again!",
-	"Yes, let your desire to click take control! Again!",
-	"Your thirst cannot be satisfied! Click again!",
-	"Continue, and you will surpass all other button clickers!",
-	"You are <i>right</i> to do this! It is your destiny!",
-	"To understand the great mystery, one must study all its aspects! <br/>Click again...",
-	"Heh heh heh...",
-	"Mwahahahaaaa!",
-	"UNLIMITED",
-	"UNLIMITED <i>POWER!</i>",
-	"Now, the <i>true</i> artefacts of my Hegemony..."
-];
-
-let btnList = [
-	"...on Github",
-	"(click again to close)",
-	"Yup, buttons are great",
-	"Don't mind if I do",
-	"Nothin like a nice button",
-	"Hmmmm, ok",
-	"So satisfying",
-	"Aw, shucks, ok",
-	"Oh, I can feel it",
-	"Yes!",
-	"So thirsty!",
-	"I will surpass them!",
-	"My... Destiny...",
-	"I... I understand",
-	"I have heard the tragedy...",
-	"...of Darth Plagueis The Wise...",
-	"...I will do whatever you ask...",
-	"...my master",
-	"Yes, my master"
-];
-
-// declarations for convenience
-let popupBtn = document.getElementById('popup_btn');
-let msgWhenOpen = document.getElementById('message-when-open');
-let msgWhenClosed = document.getElementById('message-when-closed');
-let popup_p = document.getElementById('popup_p');
-
+let zap1 = document.getElementById('lightning_1');
+let zap2 = document.getElementById('lightning_2'); // could make this work with 1 zap element
+let zap3 = document.getElementById('lightning_3'); // used 3 in case I ever want the flexibility
 let btnTopLeft = document.getElementById('btnTopLeft');
 let btnMidLeft = document.getElementById('btnMidLeft');
 let btnBotLeft = document.getElementById('btnBotLeft');
@@ -123,73 +98,9 @@ let btnTopRight = document.getElementById('btnTopRight');
 let btnMidRight = document.getElementById('btnMidRight');
 let btnBotRight = document.getElementById('btnBotRight');
 
-let btnColumns = document.getElementById('btn-columns');
-
-let zap1 = document.getElementById('lightning_1');
-let zap2 = document.getElementById('lightning_2'); // could make this work with 1 zap element
-let zap3 = document.getElementById('lightning_3'); // used 3 in case I ever want the flexibility
-
 let count = 0;
 
-// this is where the fun begins...
-function order66() {
-	if (count < 19) {
-		count++;
-		console.log(count);
-		
-		switchMsg();
-	}
-
-	// at specific counts, extra functions occur
-	if (count === 1) {
-		document.getElementById("encouragement").style.display = "block";
-		// popup_p fades in after a second
-		setTimeout(function () { popup_p.classList.remove('fade-out'); }, 1*1000);
-	} else if (count === 3) {
-		popup_p.style.display = 'none';
-	} else if (count === 5) {
-		hideButtons();
-		msgWhenOpen.style.marginTop = '86px';
-	}
-
-	function switchMsg() {
-		popupBtn.innerHTML = btnList[count];
-		if (formOpen) {
-			msgWhenClosed.innerHTML = msgList[count];
-		} else {
-			msgWhenOpen.innerHTML = msgList[count];
-		}
-	}
-
-	function hideButtons() {
-		btnColumns.style.display = 'none';
-		/*
-		btnTopLeft.style.display = 'none';
-		btnMidLeft.style.display = 'none';
-		btnBotLeft.style.display = 'none';
-		btnTopRight.style.display = 'none';
-		btnMidRight.style.display = 'none';
-		btnBotRight.style.display = 'none';
-		*/
-	}
-
-	function showButtons() {
-		btnTopLeft.style.display = 'block';
-		btnMidLeft.style.display = 'block';
-		btnBotLeft.style.display = 'block';
-		btnTopRight.style.display = 'block';
-		btnMidRight.style.display = 'block';
-		btnBotRight.style.display = 'block';
-	}
-
-	function screenFlash() {
-		let target = document.getElementById('Background');
-		target.className = 'Background'; // readies element to have blink added
-		setTimeout(function () { target.className = "Background Blink" }, 5);
-	}
-}
-
-/*function order66() { // this is where the fun begins...
+function order66() { // this is where the fun begins...
 	count++;
 	console.log(count);
 
@@ -201,39 +112,39 @@ function order66() {
 		popup_btn.innerHTML = "Nice, right?";
 	} else if (count === 4) {
 		popup_btn.innerHTML = "Nothin like a nice button";
-		popup_p.className += 'fade-out';
+		turtleText.className += 'fade-out';
 	} else if (count === 5) {
 		popup_btn.innerHTML = "Not4in l2ke a n!ce butt0n";
-		setTimeout(function () { popup_p.classList.remove('fade-out'); }, 1);
-		popup_p.innerHTML = "Ah yes, you feel the button's call. Good.";
+		setTimeout(function () { turtleText.classList.remove('fade-out'); }, 1);
+		turtleText.innerHTML = "Ah yes, you feel the button's call. Good.";
 	} else if (count === 6) {
 		popup_btn.innerHTML = "N0t4iN 12ke @ n!ce b-t+0n";
 	} else if (count === 7) {
-		popup_p.innerHTML = "Feel the <i>power</i> it's given you over these buttons.";
+		turtleText.innerHTML = "Feel the <i>power</i> it's given you over these buttons.";
 	} else if (count === 8) {
 		popup_btn.innerHTML = "N0^4iK 12k * < n!3c 8u)+Fn";
 	} else if (count === 9) {
-		popup_p.innerHTML = "Your power will only <i>grow</i> with more clicks!";
+		turtleText.innerHTML = "Your power will only <i>grow</i> with more clicks!";
 	} else if (count === 10) {
 		popup_btn.innerHTML = "30^4iM 1$3 A My360 Z0 m$f30s";
 	} else if (count === 11) {
-		popup_p.innerHTML = "Further clicking can fulfill your wildest dreams!";
+		turtleText.innerHTML = "Further clicking can fulfill your wildest dreams!";
 	} else if (count === 12) {
 		popup_btn.innerHTML = "I pq3Qc 3^el2 ^0 ?ur ^ch!dsr";
 	} else if (count === 13) {
-		popup_p.innerHTML = "Yes! More! Your thirst cannot be satisfied!";
+		turtleText.innerHTML = "Yes! More! Your thirst cannot be satisfied!";
 	} else if (count === 14) {
 		popup_btn.innerHTML = "! pqeQc 3yel t0 ?4yr te24!nr";
 	} else if (count === 15) {
-		popup_p.innerHTML = "You will surpass all other button clickers!";
+		turtleText.innerHTML = "You will surpass all other button clickers!";
 	} else if (count === 16) {
 		popup_btn.innerHTML = "! pleQe 3ysel t0 ?4ur tea4!ng";
 	} else if (count === 17) {
-		popup_p.innerHTML = "Yeeesss... yes! you are <i>right</i> to do this! it is your <i>destiny</i>!";
+		turtleText.innerHTML = "Yeeesss... yes! you are <i>right</i> to do this! it is your <i>destiny</i>!";
 	} else if (count === 18) {
 		popup_btn.innerHTML = "I plede yself t0 y4ur tea4!ngs";
 	} else if (count === 19) {
-		popup_p.innerHTML = "Fuel your passions into your index finger! feel the fire rise within!";
+		turtleText.innerHTML = "Fuel your passions into your index finger! feel the fire rise within!";
 	} else if (count === 20) {
 		popup_btn.innerHTML = "I pledge myself to your teachings";
 	} else if (count === 21) {
@@ -241,9 +152,9 @@ function order66() {
 		btn3.style.display = 'none';
 		document.getElementById('popup-Column_1').style.height = '126px';
 		document.getElementById('popup-Column_2').style.height = '126px';
-		popup_p.style.marginTop = '160px';
-		popup_p.style.fontSize = '16px';
-		popup_p.innerHTML = "heh heh heh heh...";
+		turtleText.style.marginTop = '160px';
+		turtleText.style.fontSize = '16px';
+		turtleText.innerHTML = "heh heh heh heh...";
 		blink();
 	} else if (count === 22) {
 		popup_btn.innerHTML = "I have heard the tragedy...";
@@ -252,20 +163,20 @@ function order66() {
 		btn2.style.display = 'none';
 		document.getElementById('popup-Column_1').style.height = '66px';
 		document.getElementById('popup-Column_2').style.height = '66px';
-		popup_p.style.marginTop = '135px';
-		popup_p.style.fontSize = '20px';
-		popup_p.innerHTML = "Hahahahahahahahahahaaaaa!";
+		turtleText.style.marginTop = '135px';
+		turtleText.style.fontSize = '20px';
+		turtleText.innerHTML = "Hahahahahahahahahahaaaaa!";
 		blink();
 	} else if (count === 24) {
 		popup_btn.innerHTML = "...of Darth Plagueis The Wise";
 	} else if (count === 25) {
 		btn4.style.display = 'none';
 		btn1.style.display = 'none';
-		popup_p.style.marginTop = '85px';
-		popup_p.style.fontSize = '30px';
-		popup_p.style.textAlign = 'left';
-		popup_p.style.padding = '0px 65px';
-		popup_p.innerHTML = "<i>UNLIMITED</i>";
+		turtleText.style.marginTop = '85px';
+		turtleText.style.fontSize = '30px';
+		turtleText.style.textAlign = 'left';
+		turtleText.style.padding = '0px 65px';
+		turtleText.innerHTML = "<i>UNLIMITED</i>";
 		blink();
 		zap3.className = 'lightning_3'; // adds the lightning
 		setTimeout(function () { blink(); }, 300);
@@ -276,7 +187,7 @@ function order66() {
 		popup_btn.innerHTML = "I will do whatever you ask";
 	} else if (count === 27) {
 		p_git.innerHTML = "Good, now click again";
-		popup_p.innerHTML = "<i>UNLIMITED POWEEEEEEEER!!!</i>";
+		turtleText.innerHTML = "<i>UNLIMITED POWEEEEEEEER!!!</i>";
 		blink();
 		zap1.className = 'lightning_1';
 		setTimeout(function () { blink(); }, 300);
@@ -332,12 +243,12 @@ function order66() {
 
 		document.getElementById('popup-Column_1').style.height = '175px';
 		document.getElementById('popup-Column_2').style.height = '175px';
-		popup_p.style.marginTop = '188px';
-		popup_p.innerHTML = '';
+		turtleText.style.marginTop = '188px';
+		turtleText.innerHTML = '';
 		document.getElementById('h1_git').style.fontVariant = 'small-caps';
 		document.getElementById('h1_git').innerHTML = "My most legendary achievements:";
 	}
-}*/
+}
 
 
 // have a 'please turn off the palpatine' button

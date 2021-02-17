@@ -81,14 +81,18 @@ body {
 	box-sizing: border-box;
 }
 
+
+/* /////////////////////
+		Columns
+///////////////////// */
 .Column_1 {
 	float: left;  
 	width: 50%;
 	padding: 10px; 
 	padding-top: 3%;
 	height: 400px;
-	background-color: #f2f2f2;
-	background: rgba(242, 242, 242, 0.85);
+	background-color: #fff;
+	background: rgba(190, 243, 230, 0.85);
 }
 
 #git_column {
@@ -117,8 +121,8 @@ body {
 	padding: 10px;
 	padding-top: 2%;
 	height: 450px;
-	background-color: #f2f2f2;
-	background: rgba(242, 242, 242, 0.85);
+	background-color: #fff;
+	background: rgba(190, 243, 230, 0.85);
 }
 
 .Row {
@@ -253,13 +257,12 @@ img:hover {
 	transform: scale(1.01);
 }
 
-footer {
-	padding: 2%;
-	background-color:white;
-}
 
-/* FadeIn FX */
+/* /////////////////////
+		Fade-in FX
+///////////////////// */
 #hey {
+	color: #fff;
 	opacity: 1;
 	transition: 2s .8s opacity;
 }
@@ -270,6 +273,7 @@ footer {
 }
 
 #my_name {
+	color: #fff;
 	opacity: 1;
 	transition: 2s .8s opacity;
 }
@@ -280,6 +284,7 @@ footer {
 }
 
 #welcome {
+	color: #fff;
 	opacity: 1;
 	transition: 2s .8s opacity;
 }
@@ -319,22 +324,19 @@ footer {
 	transition: none;
 }
 
-#p_git {
-	opacity: 1;
-	transition: 2s .8s opacity;
-	text-align: center;
-	height: 18px;
-}
-
 #p_git.fade-out {
 	opacity: 0;
 	transition: none;
 }
 
 
-/* POP-UP FORM */
+/* /////////////////////
+		Pop-Up Form
+///////////////////// */
 .open-btn {
-	background-color: #555;
+	position: relative;
+	top: 8px;
+	background-color: #5d64a4;
 	color: white;
 	border-radius: 4px;
 	padding: 16px 20px;
@@ -346,12 +348,21 @@ footer {
 }
 
 .open-btn:hover {
-	background-color: #999999;
+	background-color: #7a81ca;
 	color: white;
 }
 
-#git_button {
+#popup_btn {
 	font-size: 16px;
+}
+
+/* hidden */
+#popup-background {
+	position: relative;
+	top: 20px;
+	background-color: #f3c7be;
+	border-radius: 20px;
+	height: 70px;
 }
 
 .hidden-btn-container {
@@ -359,40 +370,55 @@ footer {
 	display: none;
 }
 
+#btn-columns {
+	position: relative;
+    top: 27px;
+}
+
 .hidden-btn-container .btn {
-	padding: 15px 20px;
+	padding: 17px 20px;
 	cursor: pointer;
 	width: 100%;
 	margin-bottom:10px;
 	border-radius: 4px;
+	color: #fff;
 }
 
 .hidden-btn-container .btn:hover {
 	background-color: #fffeb3;
 }
 
+#message-when-open {
+	position: relative;
+	top: 21px;
+	background-color: #fff;
+	padding: 4px;
+	margin: 0px 11px;
+	border-radius: 20px;
+}
+
 .btn1 {
-	background-color: #E2EAFC;
+	background-color: #7A81CA;
 }
 
 .btn2 {
-	background-color: #CCDBFD;
+	background-color: #AA7BC9;
 }
 
 .btn3 {
-	background-color: #B6CCFE;
+	background-color: #D187AB;
 }
 
 .btn4 {
-	background-color: #FFD6E2;
+	background-color: #AA7BC9;
 }
 
 .btn5 {
-	background-color: #FFC2D4;
+	background-color: #D187AB;
 }
 
 .btn6 {
-	background-color: #FF99B8;
+	background-color: #DE92A1;
 }
 
 #h1_git {
@@ -408,6 +434,7 @@ footer {
 	padding-top: 1.2%;
 	height: 175px;
 	opacity: 1.0;
+	z-index: 2;
 }
 
 .popup-Column_2 {
@@ -417,11 +444,15 @@ footer {
 	padding-top: 1.2%;
 	height: 175px;
 	opacity: 1.0;
+	z-index: 2;
 }
 
 #popup_p {
+	float: left;
+	position: relative;
+	top: 5px;
+	width: 100%;
 	text-align: center;
-	margin-top: 188px;
 	font-size: 13px;
 	opacity: 1;
 	transition: 2s opacity;
@@ -432,7 +463,35 @@ footer {
 	transition: none;
 }
 
-/* Lightning FX */
+/* unhidden */
+.unhidden-btn-container {
+	max-width: 100%;
+}
+
+#message-when-closed {
+	margin: 0px;
+	background-color: #fff;
+	padding: 4px;
+	border-radius: 20px;
+}
+
+
+/* /////////////////////
+		Footer
+///////////////////// */
+footer {
+	padding: 2%;
+	background-color:#f3c7be;
+}
+
+.slight-pad {
+	padding-top: 6px;
+}
+
+
+/* /////////////////////
+		Lightning FX
+///////////////////// */
 .Blink {
 	animation: blink 0.3s linear;
 }

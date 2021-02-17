@@ -20,22 +20,20 @@
 	</div><br><br>
 
 <!-- Video -->
-	<div id="palpatine">
-		<div id="Home">
-			<video autoplay muted loop id="Typing_Video">
-				<source src="stylesheet/video/big-sea.mp4" type="video/mp4">
-				Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
-			</video>
-		</div>
+	<div id="Home">
+		<video autoplay muted loop id="Typing_Video">
+			<source src="stylesheet/video/big-sea.mp4" type="video/mp4">
+			Sorry, your browser doesn't support this embedded video. <!-- message if video fails to run -->
+		</video>
 	</div>
 
-<!-- text over video --> 
+<!-- Top row over video --> 
 	<div class="Video_Text"> 
-		<h1 id="hey" style="color:white;">hey.</h1>
-		<h3 id="my_name" style="color:white;">my name is Rhodri.</h3>
+		<h1 id="hey">hey.</h1>
+		<h3 id="my_name">my name is Rhodri.</h3>
 			<p> 
 				<strong>
-					<center id="welcome" style="color:white;">
+					<center id="welcome">
 						thanks for stopping by!<br>
 						welcome to my lil' corner of the interwebs.
 					</center>	
@@ -58,7 +56,7 @@
 				</div>
 				<div class="paragraph">
 					<p id="fadeIn2">
-						Of course, the efficacy of my reign is equal only to the variety of those subjects I govern. Under the tutelage of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer curriculum, I have brought into my kingdom HTML, CSS, JavaScript, SQL, Python, C# and more.
+						Of course, the efficacy of my reign is rivaled only by the variety of those subjects I govern. Under the tutelage of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer curriculum, I have brought HTML, CSS, JavaScript, SQL, Python, and C# under my rule.
 					</p>
 				</div>
 				<div class="paragraph">
@@ -73,23 +71,29 @@
 <!-- GitHub Link -->
 	<div class="Row" id="GitHub">
 		<div class="Column_1" id="git_column">
-			<p id="p_git">Artefacts of my hegemony (such as this website) can be found... </p>
+			<div class="unhidden-btn-container Row" id="encouragement">
+				<h3 id="message-when-closed">Artefacts of my Hegemony may be found...</h3>
+			</div>
 			<!-- popup box -->
-			<button class="open-btn" id="git_button" onclick="openForm();order66();">...on Github</button>
+			<div id="popup-background">
+				<button class="open-btn" id="popup_btn" onclick="openForm();order66();">...on Github</button>
 
-			<div class="hidden-btn-container Row" id="myForm">
-				<h1 id="h1_git">some of my favorite projects:</h1>
-   				<div id="popup-Column_1" class="popup-Column_1">
-					<button type="submit" id="btn1" class="btn btn1">an example</button>
-					<button type="submit" id="btn2" class="btn btn2">another example</button>
-					<button type="submit" id="btn3" class="btn btn3">and another example</button>
-    			</div>
-  				<div id="popup-Column_2" class="popup-Column_2">
- 				   	<button type="submit" id="btn4" class="btn btn4">an example</button>
-					<button type="submit" id="btn5" class="btn btn5">another example</button>
-					<button type="submit" id="btn6" class="btn btn6">and another example</button>
+				<div class="hidden-btn-container Row" id="my-form">
+					<h3 id="message-when-open">some favorites, or click the turtle to see it all --></h3>
+					<div id="btn-columns">
+		   				<div id="popup-Column_1" class="popup-Column_1">
+							<button type="submit" id="btnTopLeft" class="btn btn1" target="_blank">an example</button>
+							<button type="submit" id="btnMidLeft" class="btn btn2" target="_blank">another example</button>
+							<button type="submit" id="btnBotLeft" class="btn btn3" target="_blank">and another example</button>
+		    			</div>
+		  				<div id="popup-Column_2" class="popup-Column_2">
+		 				   	<button type="submit" id="btnTopRight" class="btn btn4" target="_blank">an example</button>
+							<button type="submit" id="btnMidRight" class="btn btn5" target="_blank">another example</button>
+							<button type="submit" id="btnBotRight" class="btn btn6" target="_blank">and another example</button>
+						</div>
+						<p class="fade-out" id="popup_p">(pssssst hey click that button up there again)</p>
+					</div>
 				</div>
-				<p id="popup_p">(or heck, just click the turtle to see everything)</p>
 			</div>
 		</div>
 		
@@ -110,7 +114,7 @@
 			<h1 id="ctkt">Contact</h1> 
 				<form action="https://formspree.io/f/mqkgdeep" onsubmit="return formValidation()" method="POST" name="ctkt">
 					<label>name:</label>
-						<input type="text" id="Name" name="Name" placeholder="jot that name down, pal">
+						<input type="text" id="Name" name="Name" placeholder="jot that name down, friendo">
 					<label>email:</label>
 						<input type="email" id="Email" name="Email" placeholder="and your email, if you're feelin spicy">
 					<label>phone:</label>
@@ -125,7 +129,8 @@
 <!-- Footer -->
 	<footer>
 		<p>
-			<center>&copy; rhodri,  aninboxforstuff@gmail.com</center><br>
+			<center>&copy; rhodri,  aninboxforstuff@gmail.com</center>
+			<center class="slight-pad">(yup, that's a real email)</center>
 		</p>
 	</footer>
 
