@@ -99,7 +99,7 @@ function openForm() {
 
 let msgList = [ // length: 20
 	"",
-	"some favorites, or click the turtle to see it all -->",
+	"Some favorites, or click the turtle to see it all -->",
 	"Fun, right? Go ahead, have another click.",
 	"You're quite good at this! Click again.",
 	"I can see you are no ordinary user. Please, click again.",
