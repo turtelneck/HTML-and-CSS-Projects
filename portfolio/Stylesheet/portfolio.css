@@ -92,7 +92,7 @@ body {
 	padding-top: 3%;
 	height: 400px;
 	background-color: #fff;
-	background: rgba(190, 243, 230, 0.85);
+	background: rgb(190 233 243 / 85%);
 }
 
 #git_column {
@@ -122,7 +122,7 @@ body {
 	padding-top: 2%;
 	height: 450px;
 	background-color: #fff;
-	background: rgba(190, 243, 230, 0.85);
+	background: rgb(190 233 243 / 85%);
 }
 
 .Row {
@@ -336,8 +336,8 @@ img:hover {
 .open-btn {
 	position: relative;
 	top: 8px;
-	background-color: #5d64a4;
-	color: white;
+	background-color: #97a1e8;
+	color: #fff;
 	border-radius: 4px;
 	padding: 16px 20px;
 	cursor: pointer;
@@ -348,8 +348,8 @@ img:hover {
 }
 
 .open-btn:hover {
-	background-color: #7a81ca;
-	color: white;
+	background-color: #c3f7ff;
+	color: #000;
 }
 
 #popup_btn {
@@ -381,11 +381,12 @@ img:hover {
 	width: 100%;
 	margin-bottom:10px;
 	border-radius: 4px;
-	color: #fff;
+	color: #000;
 }
 
 .hidden-btn-container .btn:hover {
-	background-color: #fffeb3;
+	background-color: #c3f7ff;
+	color: #000;
 }
 
 #message-when-open {
@@ -398,27 +399,27 @@ img:hover {
 }
 
 .btn1 {
-	background-color: #7A81CA;
+	background-color: #f3e8be;
 }
 
 .btn2 {
-	background-color: #AA7BC9;
+	background-color: #f3e8be;
 }
 
 .btn3 {
-	background-color: #D187AB;
+	background-color: #f3e8be;
 }
 
 .btn4 {
-	background-color: #AA7BC9;
+	background-color: #f3e8be;
 }
 
 .btn5 {
-	background-color: #D187AB;
+	background-color: #f3e8be;
 }
 
 .btn6 {
-	background-color: #DE92A1;
+	background-color: #f3e8be;
 }
 
 #h1_git {
