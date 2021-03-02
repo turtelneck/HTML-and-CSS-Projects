@@ -1,25 +1,26 @@
-<body>
-	<p>This depository's noteworthy projects: </p>
-		<ul>
-			<li>
-				<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/One-Page%20Website">
-					Birlumbus Collection of Fine Art
-				</a>
-			</li>
-			<li>
-				<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/bootstrap4_project">
-					Academy Cinemas
-				</a>
-			</li>
-			<li>
-				<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/portfolio">
-					Portfolio/Intro page
-				</a>
-			</li>
-		</ul>
-</body>
-Birlumbus Collection of Fine Art
-The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons with exceptionally refined taste.
+<p>This depository's noteworthy projects: </p>
+<ul>
+	<li>
+		<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/One-Page%20Website">
+				Birlumbus Collection of Fine Art
+		</a>
+	</li>
+	<li>
+		<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/bootstrap4_project">
+			Academy Cinemas
+		</a>
+	</li>
+	<li>
+		<a href="https://github.com/turtelneck/HTML-and-CSS-Projects/tree/main/portfolio">
+			Portfolio/Intro page
+		</a>
+	</li>
+</ul>
+
+
+<p>Birlumbus Collection of Fine Art</p>
+
+<p>The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons with exceptionally refined taste.</p>
 
 Academy Cinemas
 This is an example website for a movie theater, makiing use of bootraps components.
