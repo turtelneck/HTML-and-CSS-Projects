@@ -18,12 +18,18 @@
 </ul>
 
 
-<p>Birlumbus Collection of Fine Art</p>
-
-<p>The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons with exceptionally refined taste.</p>
-
+Birlumbus Collection of Fine Art
+<ul>
+	<li>The Birlumbus Collection of Fine Art is an example website ostensibly selling art to patrons with exceptionally refined taste.</li>
+</ul>
 Academy Cinemas
-This is an example website for a movie theater, makiing use of bootraps components.
+<ul>
+	<li>This is an example website for a movie theater, makiing use of bootraps components.</li>
+</ul>
+
 
 Portfolio/Intro page
-An example website hosted at birdstopher.biz using basic features as a way to introduce someone to me and my work.
+<ul>
+	<li>An example website using basic features as a way to introduce someone to me and my work.</li>
+</ul>
+
